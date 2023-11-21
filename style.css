@@ -1,0 +1,339 @@
+@charset "UTF-8";
+
+/* Fonte via Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+
+/* Definições Gerais */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+
+
+/* Para VERSÃO MOBILE/TABLETS (ECRÃS PEQUENOS) */
+@media screen and (max-width: 889px) {
+
+    html, body{
+        height: 100%;
+    }
+
+
+    /* Main Div */
+    .timeContainer{
+        height: 100%;
+        background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+        position: relative;
+    }
+
+
+    /* Div Horas  */
+    .time{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 85%;
+        transform: translate(-50%, -50%);
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+        padding-top: 6vh;
+    }
+
+    /* Título Principal */
+    .time h1{
+        position:absolute;
+        top: -14vh;
+        font-size: 40px; 
+        letter-spacing: 1px;
+        font-family: 'VT323', monospace;
+        color: white;
+        text-decoration: underline;
+        text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.704),-5px 1px 5px rgba(0, 0, 0, 0.39);
+    }
+
+
+    .time div{
+        background-color: grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        background-image: linear-gradient(to right,#00bf8f,#001510e7);
+    }
+
+    /* Div das Horas  */
+    .time div:nth-child(2){
+        height: 220px;
+        border-top-left-radius:100px;
+        border-bottom-right-radius: 80px;
+        border: 4px outset rgba(211, 211, 211, 0.872);
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.471);
+        width: 100%;
+    }
+
+    .time div:nth-child(2) p{
+        font-size: 160px;
+        font-weight: bolder;
+        letter-spacing: 1px;
+    }
+
+    /* Div dos Minutos */
+    .time div:nth-child(3){
+        height: 80px;
+        width: 55%;
+        border: 4px outset rgba(211, 211, 211, 0.863);
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.552);
+        border-bottom-left-radius: 60px;
+        border-top-right-radius: 80px;
+    }
+
+    .time div:nth-child(3) p{
+        font-size: 48px;
+        font-weight: bold;
+    }
+
+    /* Div dos Segundos */
+    .time div:nth-child(4){
+        width: 30%;
+        height: 50px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 40px;
+        border: 2px outset rgba(211, 211, 211, 0.798);
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.552);
+    }
+
+
+    .time div:nth-child(4) p{
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+
+    .time div p{
+        color: white;
+        font-family: 'VT323', monospace;
+        -webkit-background-clip: text;
+        background-clip: text;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.448);
+    }
+
+    /* Imagens e Subtítulos (Não visíveis) */
+    .horario img, h3{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Para VERSÃO PC/TV (Ecrãs MAIOR RESULOÇÃO) */
+@media screen and (min-width:890px) {
+    html, body{
+        width: 100%;
+        height: 100%;
+    }
+    
+    /* Main Div */
+    .timeContainer{
+        background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 8vh;
+    }
+    
+    
+    /* Div HorasContainer */
+    .time{
+        background-image: url(Imagens/clockLondon.jpg);
+        background-repeat: no-repeat;
+        background-clip: border-box;
+        background-position: top center;
+        background-size: cover;
+        padding: 20px;
+        width: 500px;
+        min-height: 500px;
+        border-radius: 50%;
+        box-shadow:  -7px 7px 33px #0000004e,
+        7px -7px 33px #0000005f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+        overflow: hidden;
+        gap: 1.5rem;
+        border: 6px outset rgba(211, 211, 211, 0.811);
+    }
+    
+    
+    /* Título Principal */
+    h1{
+        position: absolute;
+        top: 70px;
+        font-size: 44px;
+        font-family: 'VT323', monospace;
+        color: #ebebeb;
+        text-shadow: 0px 0px 2px rgba(0, 0, 0, 1),-5px 1px 5px rgba(0, 0, 0, 1);
+        text-decoration: underline;
+        z-index: 1;
+    }
+    
+    
+    /* Divs das Horas/Minutos/Segundos */
+    .time div{
+        display: flex;
+        background: radial-gradient(circle, rgba(77, 77, 77, 0.901) 0%, rgba(196, 196, 196, 0.684) 50%, rgba(139, 139, 139, 0.872) 75%, rgba(230,230,230,1) 100%);
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        color: white;
+        border: 6px outset rgba(233, 233, 233, 0.835);
+        justify-content: center;
+        align-items: center;
+        box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.89);
+    }
+    
+    /* Texto */
+    .time div p{
+        font-size: 62px;
+        font-family: 'VT323', monospace;
+        text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.899);
+    }
+    
+    
+    /* Div Imagens */
+    .horario{
+        position: relative;
+    }
+    
+    /* Div Manhã */
+    .horario .manha{
+        position: absolute;
+        width: 260px;
+        height: 260px;
+        left: -160px;
+        top: 60px;
+        background-color: white;
+        border-radius: 50%;
+        border: 4px outset rgba(128, 128, 128, 0.609);
+        box-shadow:  -10px 10px 40px #000000aa;
+        overflow: hidden;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Manhã texto */
+    .manha h3{
+        color: whitesmoke;
+        z-index: 1;
+        position: absolute;
+        font-family: 'VT323', monospace;
+        left: 50px;
+        font-size: 30px;
+        letter-spacing: 1px;
+        text-shadow: 0px 0px 2px rgba(0, 0, 0, 1),-5px 1px 5px rgba(0, 0, 0, 1);
+    }
+    
+    /* Imagem Manhã */
+    .manha img{
+        width: 100%;
+    }
+    
+    
+    /* Div Tarde */
+    .horario .tarde{
+        position: absolute;
+        top: -160px;
+        left: 120px;
+        width: 260px;
+        height: 260px;
+        background-color: white;
+        border-radius: 50%;
+        border: 4px outset rgba(128, 128, 128, 0.609);
+        box-shadow: 10px 10px 14px rgba(0, 0, 0, 0.446);
+        overflow: hidden;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+    /* Tarde texto */
+    .tarde h3{
+        position: absolute;
+        z-index: 1;
+        color: whitesmoke;
+        font-family: 'VT323', monospace;
+        letter-spacing: 1px;
+        top: 60px;
+        font-size: 30px;
+        text-shadow: 0px 0px 2px rgba(0, 0, 0, 1),-5px 1px 5px rgba(0, 0, 0, 1);
+    }
+    
+    /* Imagem Tarde */
+    .tarde img{
+        width: 100%;
+    }
+    
+
+
+    /* Div Noite */
+    .horario .noite{
+        position: absolute;
+        right: -160px;
+        top: 50px;
+        width: 260px;
+        height: 260px;
+        background-color: white;
+        border-radius: 50%;
+        border: 4px outset rgba(128, 128, 128, 0.609);
+        box-shadow: 10px 10px 14px rgba(0, 0, 0, 0.446);
+        overflow: hidden;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+    /* Noite texto */
+    .noite h3{
+        position: absolute;
+        right: 50px;
+        font-size: 30px;
+        letter-spacing: 1px;
+        font-family: 'VT323', monospace;
+        color: whitesmoke;
+        text-shadow: 0px 0px 2px rgba(0, 0, 0, 1),-5px 1px 5px rgba(0, 0, 0, 1);
+    }
+
+
+    /* Imagem Noite */
+    .noite img{
+        width: 100%;
+    }
+    
+}
